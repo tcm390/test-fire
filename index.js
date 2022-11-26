@@ -143,7 +143,7 @@ export default () => {
             vec4 gradient = texture2D(gradientTexture, vec2(smoke.a)); 
             gl_FragColor = smoke;
             // gl_FragColor.rgb *= 0.1;
-            gl_FragColor.rgb = mix(vec3(0.968, 0.880, 0.255), vec3(0.980, 0.251, 0.155), smoke.r * 3.);
+            gl_FragColor.rgb = mix(vec3(0.968, 0.880, 0.255), vec3(0.980, 0.051, 0.055), smoke.r * 3.);
             gl_FragColor.rgb = mix(gl_FragColor.rgb, vec3(0.), (vIndex / 89.) * 1.);
             gl_FragColor.a *= vOpacity * pow(clamp(vWorldPosition.y / 5., 0., 1.), 2.);
             ${THREE.ShaderChunk.logdepthbuf_fragment}
